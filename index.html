@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1b101a">
+  <title>FLAMES | Discover Your Destiny</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- SCREEN 1: NAME ENTRY -->
+  <main id="inputScreen" class="screen entry-screen">
+    <div class="app">
+      <header class="header">
+        <img src="gif/fire.gif" alt="Fire animation" class="fire-gif">
+        <h1>FLAMES</h1>
+        <p>Discover your relationship!</p>
+      </header>
+
+      <section class="form-card">
+        <label for="name1">YOUR NAME</label>
+        <input
+          id="name1"
+          type="text"
+          placeholder="Enter your name..."
+          maxlength="40"
+          autocomplete="given-name"
+        >
+
+        <label for="name2">THEIR NAME</label>
+        <input
+          id="name2"
+          type="text"
+          placeholder="Enter their name..."
+          maxlength="40"
+          autocomplete="off"
+        >
+
+        <button id="playBtn" type="button">
+          🔥 REVEAL OUR DESTINY 🔥
+        </button>
+
+        <p id="error" class="error" role="alert"></p>
+      </section>
+
+      <footer>Made with ❤️ and a little destiny.</footer>
+    </div>
+  </main>
+
+
+  <!-- SCREEN 2: ONE FULL-SCREEN LOADING SCREEN -->
+  <section
+    id="loadingScreen"
+    class="screen loading-screen hidden"
+    aria-live="polite"
+    aria-label="Calculating your FLAMES result"
+  >
+    <div class="loading-content">
+      <img
+        src="gif/load.gif"
+        alt="Loading animation"
+        class="loading-gif"
+      >
+
+      <h2>CALCULATING DESTINY</h2>
+      <p id="loadingMessage">Analyzing your names...</p>
+
+    
+      <p class="loading-small">
+        The universe is deciding your fate...
+      </p>
+    </div>
+  </section>
+
+
+  <!-- SCREEN 3: RESULT ONLY -->
+  <main id="resultScreen" class="screen result-screen hidden">
+    <section class="result-card">
+      <p class="caption">YOUR DESTINY IS...</p>
+
+      <div class="gif-frame">
+        <img
+          id="resultGif"
+          src=""
+          alt="Your FLAMES result"
+        >
+      </div>
+
+      <h1 id="resultTitle"></h1>
+      <p id="resultDescription"></p>
+
+      <button id="againBtn" class="again-button" type="button">
+        TRY AGAIN ❤️
+      </button>
+    </section>
+  </main>
+
+  
+<audio id="bgMusic" autoplay loop preload="auto">
+  <source src="./bgmusic.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
